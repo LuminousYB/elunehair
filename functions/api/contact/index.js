@@ -33,7 +33,7 @@ export async function onRequestPost({ request, env }) {
       },
       body: JSON.stringify({
         from: 'Elunehair Contact <onboarding@resend.dev>', // Resend 提供的测试发信地址
-        to: env.CONTACT_EMAIL || '1642334095@qq.com',     // 从环境变量读取接收邮箱（推荐）
+        to: env.CONTACT_EMAIL,     // 从环境变量读取接收邮箱（推荐）
         subject: `【Elunehair】New Visitor Message：${name}`,
         text: `NAME: ${name}\nEMAIL: ${email}\n\nMESSAGE:\n${message}`,
         reply_to: email
